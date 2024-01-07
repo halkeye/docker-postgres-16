@@ -22,7 +22,7 @@ RUN if [ $(dpkg --print-architecture) = "amd64" ]; then \
     else \
         >&2 echo "Unsupported architecture" && exit 1; \
     fi \
-    && wget -nv -O vectors.deb https://github.com/tensorchord/pgvecto.rs/releases/download/v${VECTORS_VERSION}/vectors-pg${PG_MAJOR}_${VECTORS_VERSION}_${VECTORS_ARCH}-unknown-linux-gnu.deb \
+    && wget -nv -O vectors.deb https://github.com/tensorchord/pgvecto.rs/releases/download/v${VECTORS_VERSION}/vectors-pg${PG_MAJOR}-v${VECTORS_VERSION}-${VECTORS_ARCH}-unknown-linux-gnu.deb \
     && dpkg -i vectors.deb \
     && rm vectors.deb
 
