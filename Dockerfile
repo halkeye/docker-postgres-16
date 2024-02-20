@@ -14,7 +14,7 @@ RUN set -xe; \
 
 # borrowed from https://gitlab.com/mishak/cloudnative-pg-vectors/-/blob/19c889e36491190dc888b1924d3a6b4dd10fab11/Dockerfile
 
-ARG VECTORS_VERSION=0.1.13
+ARG VECTORS_VERSION=0.2.0
 RUN if [ $(dpkg --print-architecture) = "amd64" ]; then \
         VECTORS_ARCH=amd64; \
     elif [ $(dpkg --print-architecture) = "arm64" ]; then \
