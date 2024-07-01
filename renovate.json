@@ -1,5 +1,21 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "github>halkeye/halkeye//.github/renovate/base.json5"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.github/workflows/build.yml$",
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "upstream_version: \"v(?<currentValue>.*?)\"\\n",
+        "ARG UPSTREAM_VERSION=(?<currentValue>.*?)\\n"
+      ],
+      "depNameTemplate": "ghcr.io/cloudnative-pg/postgis",
+      "datasourceTemplate": "docker",
+    }
   ]
 }
