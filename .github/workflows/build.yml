@@ -14,6 +14,7 @@ jobs:
       contents: write
       packages: write
     with:
+      platforms: linux/amd64
       upstream_version: "16-3.4"
       upstream_repo: "https://github.com/cloudnative-pg/postgres-containers"
       run_number: "${{ github.run_number }}"
