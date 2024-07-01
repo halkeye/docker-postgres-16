@@ -1,5 +1,6 @@
 ARG UPSTREAM_VERSION=16-3.4
-FROM ghcr.io/cloudnative-pg/postgis:${UPSTREAM_VERSION}
+ARG UPSTREAM_IMAGE=ghcr.io/cloudnative-pg/postgis:${UPSTREAM_VERSION}
+FROM $UPSTREAM_IMAGE
 
 USER root
 
