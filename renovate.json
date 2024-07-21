@@ -15,7 +15,7 @@
         "ARG UPSTREAM_VERSION=(?<currentValue>.*?)\\n"
       ],
       "depNameTemplate": "ghcr.io/cloudnative-pg/postgis",
-      "datasourceTemplate": "docker",
+      "datasourceTemplate": "docker"
     }
   ]
 }
